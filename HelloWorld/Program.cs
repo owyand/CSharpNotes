@@ -105,6 +105,57 @@ namespace CSharpNotes
             Console.WriteLine(ill);
             Console.WriteLine(j);
 
+            try
+            {
+                var wild = "1234";
+                byte bill = Convert.ToByte(wild);
+                Console.WriteLine(bill);
+                //this will throw an Exception OverflowException because 1234 is too large for byte
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            try
+            {
+                string str = "true";
+                bool br = Convert.ToBoolean(str);
+                Console.WriteLine(br);
+                //successful conversion
+            } catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+            //arithmetic operators
+            /*
+             * same as java
+             * incl pre/postfixed unary operators
+             * 
+             * logical operators 
+             * &&
+             * ||
+             * !
+             * same as Java
+             * has bitwise operators too
+             */
+
+            var able = 10;
+            var back = 3;
+            Console.WriteLine((float)able/(float)back);
+            //must cast to float or any decimal to get a non-whole number
+
+            //PEMDAS
+
+            Console.WriteLine(able == back); // boolean
+
+            nextSection();
+
+        }
+
+        static void nextSection()
+        {
+            //public keyword makes 
         }
     }
 }
